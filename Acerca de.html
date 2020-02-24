@@ -72,7 +72,27 @@
         </div>
     <br>
     <br>
+	
+<!--Formulario-->
+	<div class="container">
+                    <form action="send.php" method="post">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nombre</label>
+                            <input class="form-control" name="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Correo Electronico</label>
+                            <input type="email" class="form-control" name="correo">
+                        </div>
 
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Mensaje</label>
+                            <textarea class="form-control" name="mensaje" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+	
     <!--Footer-->
     <footer class="page-footer font-small blue pt-4" style: margin-top:80>
         <div class="container">
