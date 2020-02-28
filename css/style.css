@@ -8,12 +8,12 @@
   overflow-x: hidden;
   padding: 8px 0;
   overflow-y: auto;
-    width: 180px;
+    width: 190px;
   height: 650px;
 }
 
 #collapsibleNavbar a {
-	padding: 6px 8px 6px 16px;
+	padding: 10px 5px 10px;
   text-decoration: none;
   color: #2196F3;
   display: block;
