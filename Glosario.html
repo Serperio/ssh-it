@@ -31,21 +31,21 @@
                     <!--Casillas Barra de navegacion-->
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Inicio</a>
               </li>
               <li class="nav-item">
-                <a href="Ejercicios/Plantilla.html" class="nav-link">Ejercicios</a>
+                <a href="#" class="nav-link">Ejercicios</a>
               </li>
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop">Glosario</a>
                 <div class="dropdown-menu">
-                  <a href="Glosario.htmlo" id=#Basico class="dropdown-item">Basico</a>
-                  <a href="Glosario.html#Intermedio" class="dropdown-item">Intermedio</a>
-                  <a href="Glosario.html#Dificil" class="dropdown-item">Dificil</a>
+                  <a href="#" class="dropdown-item">Basico</a>
+                  <a href="#" class="dropdown-item">Intermedio</a>
+                  <a href="#" class="dropdown-item">Dificil</a>
                 </div>
               </li>
               <li class="nav-item">
-                  <a href="Acerca de.html" class="nav-link">Acerca de</a>
+                  <a href="#" class="nav-link">Acerca de</a>
               </li>
         </div>
       </div>
@@ -56,8 +56,8 @@
         <div class="col-sm-2 sticky-top"style="background-color:lavender;" id="fixed-sidebar">
             <ul>
             <div class="bg-light border-right sticky-top" id="collapsibleNavbar">
-              <div class="sidebar-heading text-center">Menú</div>
-
+              <div class="sidebar-heading text-center"><h4>Menú</h4></div>
+              <p></p>
               <div id="accordion">
                 <div class="card">
                   <div class="card-header">
@@ -68,6 +68,9 @@
                     <div class="card-body">
                       <ul>
                         <li>
+                          <a href="Glosario.html#Ctrl">Ctrl + "x"</a>
+                        </li>
+                        <li>
                           <a href="Glosario.html#cd">cd</a>
                         </li>
                         <li>
@@ -77,43 +80,13 @@
                           <a href="Glosario.html#cat">cat</a>
                         </li>
                         <li>
-                          <a href="">Cd</a>
+                          <a href="Glosario.html#file">file</a>
                         </li>
                         <li>
-                          <a href="" class="">Cd</a>
+                          <a href="Glosario.html#rm">rm</a>
                         </li>
                         <li>
-                          <a href="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="" class="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="" id=#cd>Cd</a>
-                        </li>
-                        <li>
-                          <a href="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="" class="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="">Cd</a>
-                        </li>
-                        <li>
-                          <a href="">Cd</a>
+                          <a href="Glosario.html#find">find</a>
                         </li>
                       </ul>
                     </div>
@@ -153,15 +126,27 @@
 
 <div class="container">
   <div class="alert alert-info">
-  <strong id=Basico>TIP! :</strong> Las opciones de los comandos se pueden agrupar, de manera que es lo mismo poner <kbd>ls -al</kbd> a <kbd>ls -a -l</kbd>.
+  <strong>TIP! :</strong> Las opciones de los comandos se pueden agrupar, de manera que es lo mismo poner <kbd>ls -al</kbd> a <kbd>ls -a -l</kbd>.
   <br>
-  <strong>TIP! :</strong> <kbd>"-"</kbd> se lee como <kbd>"./-"</kbd>
+  <strong>TIP! :</strong> <kbd>"-"</kbd> se lee como <kbd>"./-"</kbd>.
+  <br>
+  <strong>TIP! :</strong> El comando <kbd>"pwd"</kbd> sirve para ver la ruta donde uno se encuentra.
+  <br>
+  <strong>TIP! :</strong> Para especificar el <strong>tamaño de un archivo</strong>:
+  <ul>
+    <li><kbd>1c</kbd> = <code>1 Byte</code></li>
+    <li><kbd>1k</kbd> = <code>1 Kilobyte</code></li>
+    <li><kbd>1M</kbd> = <code>1 Megabyte</code></li>
+    <li><kbd>1G</kbd> = <code>1 Gigabyte</code></li>
+  </ul>
 </div>
  <div class="col-sm-12 parrafos"style="background-color:lavenderblush;">
-  <h3 class="text-center"><strong>Comandos Basicos</strong></h3>
+  <br>
+  <h3 class="text-center" id=Ctrl><strong>Comandos Basicos</strong></h3>
   <br>
   <br>
   <span><dt><kbd>Ctrl + "letra"</kbd> : Atajos basicos para el terminal.</dt></span>
+  <p></p>
   <ul>
 <li><kbd>Ctrl + a</kbd> = Lleva el cursor al inicio de la línea de comandos.</li>
 <li><kbd>Ctrl + e</kbd> = Lleva el cursor al final de la línea de comandos.</li>
@@ -170,7 +155,7 @@
 <li><kbd>Ctrl + k</kbd> = Limpia desde la posición del cursor hasta el final de la línea. Si se está al inicio limpia la línea entera.</li>
 <li><kbd>Ctrl + h</kbd> = Hace lo mismo que la tecla <code>backspace</code>, borra el caracter inmediatamente anterior a la posición del cursor.</li>
 <li><kbd>Ctrl + w</kbd> = Borra la palabra inmediatamente antes del cursor, si está al medio de una palabra borrara desde el cursor hasta el inicio de la palabra.</li>
-<li><kbd>Alt + d</kbd> o <kbd>Esc+d</kbd> = Borra la palabra siguiente después del cursor, si está al medio de una palabra borrara desde el cursor hasta el final de la palabra.</li>
+<li><kbd>Alt + d</kbd> o <kbd>Esc + d</kbd> = Borra la palabra siguiente después del cursor, si está al medio de una palabra borrara desde el cursor hasta el final de la palabra.</li>
 <li><kbd>Ctrl + p</kbd> = Establece la línea de comandos con el último comando introducido.</li>
 <li><kbd>Ctrl + r</kbd> = Inicia la búsqueda de comandos usados anteriormente, tecleando parte de un comando usos anteriores que hayamos realizado incluyendo las opciones y parámetros. Hecha una búsqueda pulsando de nuevo la combinación de teclas encontraremos coincidencias anteriores.</li>
 <li><kbd>Ctrl + c</kbd> = Termina el proceso que se esté ejecutando, útil para recuperar el control del sistema.</li>
@@ -179,12 +164,13 @@
 <li><kbd>Ctrl + t</kbd> = Intercambia la posición de los dos caracteres antes del cursor, útil para corregir malos tecleos.</li>
 <li><kbd>Alt + f</kbd> = Mueve el cursor al final de la palabra donde se encuentra el cursor, si se ejecuta dos veces este va al final de la siguiente palabra.</li>
 <li><kbd>Alt + b</kbd> = Mueve el cursor al inicio de la palabra donde se encuentra el cursor, si se ejecuta dos veces este va al inicio de la anterior palabra.</li>
-<li><kbd>Tab</kbd> = Autocompleta comandos o rutas de directorios o archivos.</li>
+<li><kbd id=cd>Tab</kbd> = Autocompleta comandos o rutas de directorios o archivos.</li>
 </ul>
 <hr>
    <span><dt><kbd>cd</kbd> : Cambiar de directorio.</dt></span>
+   <p></p>
   <ul>
-    <li><kbd>cd "directorio"</kbd> = Ir al directorio seleccionado.</li>
+    <li><kbd>cd ./"directorio"/</kbd> = Ir al directorio seleccionado. Solo se puede acceder a este si es un sub directorio de la ruta en la que uno se encuentra.</li>
     <li><kbd>cd -L</kbd> = Salir del directorio.</li>
     <li><kbd>cd ~</kbd> = Directorio de inicio.</li>
     <li><kbd>cd -</kbd> = Ultimo directorio en el que estabas.</li>
@@ -193,6 +179,7 @@
   </ul>
   <hr>
   <span><dt><kbd>ls</kbd> : Mostrar archivos visibles del directorio.</dt></span>
+  <p></p>
     <ul>
     <li><kbd>ls -al</kbd> = Muestra todos los directorios.</li>
     <li><kbd>ls -a</kbd> = Lista todos los archivos, incluyendo los root.</li>
@@ -204,6 +191,7 @@
   </ul>
   <hr>
   <span><dt><kbd>cat</kbd> : Leer los archivos y mostrar el contenido.</dt></span>
+  <p></p>
   <ul>
     <li><kbd>cat "nombre_archivo"</kbd> = Leer el archivo especifico</li>
     <li><kbd>cat > "nombre_archivo"</kbd> = Se crea un archivo en el directorio establecido y se puede comenzar a escribir en él. Termina de escribir con <kbd>Ctrl + d</kbd>. Si el nombre del archivo ya existe este se sobrescribe.</li>
@@ -213,51 +201,50 @@
     <li><kbd>cat -E "nombre_archivo"</kbd> = Marca el final de cada linea con un <code>$</code>.</li>
     <li><kbd>tac "nombre_archivo"</kbd> = Leer el archivo especifico en orden inverso.</li>
     <li><kbd>cat -v</kbd> = Mostrar caracteres no imprimibles</li>
-    <li><kbd>cat -s "nombre_archivo"</kbd> = Leer el archivo y suprime las lineas vacias repetidas.</li>
+    <li id=file><kbd>cat -s "nombre_archivo"</kbd> = Leer el archivo y suprime las lineas vacias repetidas.</li>
   </ul>
   <hr>
   <span><dt><kbd>file</kbd> : Muestra el tipo de archivo.</dt></span>
+  <p></p>
   <ul>
     <li><kbd>file "nombre_archivo"</kbd> = Muestra el tipo de archivo con su respectivo nombre.</li>
     <li><kbd>file *</kbd> = Muestra el tipo de todos los archivos en la que se está con sus respectivos nombres.</li>
-    <li><kbd>file /"ruta"/*</kbd> = Muestra el tipo de todos los archivos de la ruta establecida con sus respectivos nombres.</li>
+    <li><kbd>file ./"directorio"/*</kbd> = Muestra el tipo de todos los archivos de la ruta establecida con sus respectivos nombres. Solo se puede acceder a este si es un sub directorio de la ruta en la que uno se encuentra.</li>
     <li><kbd>file -b "nombre_archivo"</kbd> = Muestra el tipo de archivo sin su nombre.</li>
     <li><kbd>file --mime-type "nombre_archivo"</kbd> = Para comprobar que el tipo de fichero sea el que declara ser.</li>
     <li><kbd>file --mime-encoding "nombre_archivo"</kbd> = Averiguar la codificación de caracteres con que fue guardado un archivo.</li>
-    <li><kbd>file -z "nombre_archivo"</kbd> = Examina los archivos comprimidos.</li>
+    <li id=rm><kbd>file -z "nombre_archivo"</kbd> = Examina los archivos comprimidos.</li>
   </ul>
+  <hr>
+  <span><dt><kbd>rm</kbd> : Borra ficheros.</dt></span>
+  <p></p>
+  <ul>
+    <li><kbd>rm "nombre_archivo"</kbd> = Borra el archivo establecido.</li>
+    <li><kbd>rm -i "nombre_archivo"</kbd> = Pide confirmación antes de borrar el fichero.</li>
+    <li><kbd>rm -f "nombre_archivo"</kbd> = No pide confirmación ni produce error si un fichero no existe.</li>
+    <li><kbd>rm -r ./"directorio"/</kbd> = Borra el directorio establecido con todos sus sub-directorios y archivos.</li>
+    <li id=find><kbd>rm -v "nombre_archivo"</kbd> = Borra el archivo y junto a ello tipea el nombre del archivo que se borró.</li>
+  </ul>
+  <hr>
+  <span><dt><kbd>find</kbd> : Busca ficheros.</dt></span>
+  <p></p>
+  <ul>
+    <li><kbd>find "nombre archivo"</kbd> = Localiza si el archivo existe en la ruta establecida, si es asi este tipeara el nombre del archivo.</li>
+    <li><kbd>find ./"directorio"/</kbd> = Muestra en vertical y jerarquico todos los archivos y subdirectorios que contenga este.</li>
+    <li><kbd>find -name "nombre archivo"</kbd> = Localiza si el archivo existe en directorios o sub directorios de la ruta establecida, si es asi se tipeara la localización de este.</li>
+    <li><kbd>find -type d</kbd> = Busca todos los directorios y sub directorios que se encuentran en la ruta.</li>
+    <li><kbd>find -type f</kbd> = Busca todos los archivos que se encuentran en la ruta.</li>
+    <li><kbd>find -type l</kbd> = Busca todos los enlaces simbolicos que se encuentran en la ruta.</li>
+    <li><kbd>find -type c</kbd> = Busca todos los dispositivos de caracteres que se encuentran en la ruta.</li>
+    <li><kbd>find -size "tamaño_archivo"</kbd> = Busca todos los archivos del tamaño especificado que se encuentran en la ruta. Se antepone un <code>+</code> o <code>-</code> para especificar un "mayor a" o "menor a".</li>
+    <li><kbd>find -user "nombre_usuario"</kbd> = Busca ficheros que pertenezcan al usuario "nombre_usuario".</li>
+    <hr>
 
+    
+
+
+  </ul>
 
 
   </ul>
   <br>
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
-
-
-    <!--Footer-->
-    <footer class="page-footer font-small blue pt-4" style: margin-top:80>
-        <div class="container">
-            <img src="img/icon.png" style="width:50px"> <!--Logo universidad-->
-            <img src="img/icon.png" align="right" class="r" style="width:50px"> <!--Logo PaKeDi-->
-        </div>
-        <div class="footer-copyright text-center py-3">
-            <!--CopyRight-->
-            <p>  © 2020 Copyright: PaKeDi</p>
-        </div>
-    </footer>
-</body>
-
-<script src="js/jquery-3.4.1.slim.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</html>
