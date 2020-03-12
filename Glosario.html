@@ -1,133 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <title></title>
+  <head>
+    <title>Glosario</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie-edge">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
+  </head>
 <!-- **************************************************** CUERPO ************************************ -->
-              <!-- Barra de Navegacion-->
-<body>
-        <!--Top-->
-  <section>
-    <div class="container">
-      <h1>SSH-IT.com</h1>
-    </div>
-  </section>
-  <nav class="sticky-top">
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
+
+  <body background="../img/wallpaper.png">
+    <section>
       <div class="container">
-      
-      <!--Boton pantalla pequeña-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uno">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="uno">
-            
-                    <!--Casillas Barra de navegacion-->
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a href="index.html" class="nav-link">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a href="Ejercicios/Plantilla.html" class="nav-link">Ejercicios</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop">Glosario</a>
-                <div class="dropdown-menu">
-                  <a href="Glosario.html#Basico" class="dropdown-item">Básico</a>
-                  <a href="Glosario.html#Medio" class="dropdown-item">Intermedio</a>
-                  <a href="Glosario.html#Dificil" class="dropdown-item">Dificil</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                  <a href="Acerca de.html" class="nav-link">Acerca de</a>
-              </li>
-        </div>
+        <h1>SSH-IT.com</h1>
       </div>
-    </div>
-        
-                 <!---------------------------- experimentacion sidebar ------------------------------------------>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 sticky-top"style="background-color:lavender;" id="fixed-sidebar">
-            <ul>
-            <div class="bg-light border-right sticky-top" id="collapsibleNavbar">
-              <div class="sidebar-heading text-center"><h4>Menú</h4></div>
-              <p></p>
-              <div id="accordion">
-                <div class="card">
-                  <div class="card-header">
-                    <a class="collapse card-link text-center" data-toggle="collapse" href="#collapseOne">
-                        
-                     <!-- Acordeon 1 ---->
-                      <dt>Basico</dt></a>
-                  </div>
-                  <div id="collapseOne" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                      <ul>
-                        <li>
-                          <a href="Glosario.html#Ctrl">Ctrl + "x"</a>
-                        </li>
-                        <li>
-                          <a href="Glosario.html#cd">cd</a>
-                        </li>
-                        <li>
-                          <a href="Glosario.html#ls">ls</a>
-                        </li>
-                        <li>
-                          <a href="Glosario.html#cat">cat</a>
-                        </li>
-                        <li>
-                          <a href="Glosario.html#file">file</a>
-                        </li>
-                        <li>
-                          <a href="Glosario.html#rm">rm</a>
-                        </li>
-                        <li>
-                          <a href="Glosario.html#find">find</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+    </section>
+        <!--Top-->
+    <div class="d-flex toggled" id="wrapper">
+    <!-- Sidebar -->
+      <div class="sticky-top" id="sidebar-wrapper">
+        <div class="sticky-top">
+          <div class="sidebar-heading text-white text-center">Menúwu</div>
+            <div class="list-group list-group-flush">
+
+              <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fas fa-crow fa-fw mr-3"></span>
+                    <!--"fas fa-baby" para ejercicios-->
+                    <span class="menu-collapsed text-white">Nivel Básico</span>
+                    <span class="submenu-icon ml-auto" id= "flechitas"></span>
                 </div>
-                  
-                    <!-- Acordeon 2 -->
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-        Intermedio</a>
-                </div>
-                <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                  <div class="card-body">Lorem ipsum..</div>
-                </div>
-              </div>
-                    <!-- Acordeon 3 -->
-              <div class="card">
-                <div class="card-header">
-                  <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                  Dificil</a>
-                </div>
-                <div id="collapseThree" class="collapse" data-parent="#accordion">
-                  <div class="card-body">Lorem ipsum..</div>
-                </div>
+              </a>
+            <!-- Submenu contenido -->
+              <div id="submenu1" class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">Ctrl + "letra"</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">cd</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">ls</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">cat</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">file</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">rm</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">find</span>
+                </a>
               </div>
 
+              <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fas fa-horse fa-fw mr-3"></span>
+                  <!--"fas fa-user" para ejercicios-->
+                  <span class="menu-collapsed">Nivel Intermedio</span>
+                  <span class="submenu-icon ml-auto"></span>
+                </div>
+              </a>
+          <!-- Submenu contenido -->
+              <div id='submenu2' class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">Lorem Ipsum...</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">Lorem Ipsum...</span>
+                </a>
               </div>
+
+              <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fa fa-dragon fa-fw mr-3"></span>
+                  <span class="menu-collapsed">Nivel Difícil</span>
+                  <!--"fas fa-robot" para ejercicios-->
+                  <span class="submenu-icon ml-auto"></span>
+                </div>
+              </a>
+          <!-- Submenu contenido -->
+              <div id='submenu3' class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">Lorem Ipsum...</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                  <span class="menu-collapsed">Lorem Ipsum...</span>
+                </a>
+              </div>
+
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Events</a> -->
+                
             </div>
-            </ul>
         </div>
       </div>
-    </div>
-  </nav>
-
-<br>
-
-                    <!-- Cuerpo de la pagina-->
-<div class="container">
+        
+      <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+          <button class="btn btn-danger" id="menu-toggle">Hazme Click! uwu</button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <!--Casillas Barra de navegacion-->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a href="index.html" class="nav-link">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="Ejercicios/Ejercicios.html" class="nav-link">Ejercicios</a>
+              </li>
+              <li class="nav-item">
+                <a href="Glosario.html" class="nav-link">Glosario</a>
+              </li>
+              <li class="nav-item">
+                <a href="Acerca de.html" class="nav-link">Acerca de</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="#" class="btn btn-info" role="button">Crea tu propio servidor! :D</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      
+    <!--Contenido-->
+    <br>
+    <br>
+        <div class="container">
   <div class="alert alert-info">
   <strong>TIP! :</strong> Las opciones de los comandos se pueden agrupar, de manera que es lo mismo poner <kbd>ls -al</kbd> a <kbd>ls -a -l</kbd>.
   <br>
@@ -142,7 +147,7 @@
     <li><kbd>1M</kbd> = <code>1 Megabyte</code></li>
     <li id="Basico"><kbd>1G</kbd> = <code>1 Gigabyte</code></li>
   </ul>
-</div>
+  </div>
  <div class="col-sm-12 parrafos"style="background-color:lavenderblush;">
   <br>
   <h3 class="text-center" id=Ctrl><strong>Comandos Basicos</strong></h3>
@@ -248,33 +253,40 @@
 
   </ul>
 
-
-  </ul>
   <br>
-    
-    
-
-
-
-
-  </div>
+</div>
 </div>
 
 
-    <!--Footer-->
-    <footer class="page-footer font-small blue pt-4" style: margin-top:80>
-        <div class="container">
-            <img src="img/icon.png" style="width:50px"> <!--Logo universidad-->
-            <img src="img/icon.png" align="right" class="r" style="width:50px"> <!--Logo PaKeDi-->
-        </div>
-        <div class="footer-copyright text-center py-3">
-            <!--CopyRight-->
-            <p>  © 2020 Copyright: PaKeDi</p>
-        </div>
-    </footer>
+<br>
+<!--Footer-->
+<footer class="page-footer font-small blue pt-4" style="margin-top:80px; background-color: lavenderblush;">
+    <div class="container">
+        <img src="img/icon.png" style="width:50px"> <!--Logo universidad-->
+        <img src="img/icon.png" align="right" class="r" style="width:50px"> <!--Logo PaKeDi-->
+    </div>
+    <div class="footer-copyright text-center py-3">
+        <!--CopyRight-->
+        <p>  © 2020 Copyright: PaKeDi</p>
+    </div>
+</footer>
+</div>
+</div>
 </body>
+
 
 <script src="js/jquery-3.4.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/2224b72383.js" crossorigin="anonymous"></script>
+<!-- Menu Toggle Script -->
+
+<script>
+$("#menu-toggle").click(function (e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+</script>
+
 </html>
