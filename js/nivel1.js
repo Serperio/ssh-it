@@ -1,13 +1,19 @@
 // JavaScript source code
 function level1() {
-    {
-        var contra = document.getElementById("contra").value;
-        if (contra == "abc123") {
-            alert("Contraseña Correcta!. Avance al siguiente nivel.")
-        } else if (contra=="") {
-            alert("No ha ingresado ninguna contraseña.")
-        } else {
-            alert("Contraseña Invalida. Por favor, Intentelo de nuevo.")
+        var level_1 = document.getElementById("contra").value;
+        var contra = document.getElementById("lvl1");
+        contra.classList.remove('alert-success','alert-secondary','alert-danger');
+        contra.classList.add('alert');
+        if (level_1 == "abc123") {
+            contra.classList.add('alert-success');
+            contra.innerHTML='<strong>Correcto!</strong> Puedes acceder al siguiente nivel! :D';
         }
+        else if (level_1 == "") {
+            contra.classList.add('alert-secondary');
+            contra.innerHTML='<strong>VacÃ­o!</strong> Ingrese una contraseÃ±a.';
+        }
+        else  {
+            contra.classList.add('alert-danger');
+            contra.innerHTML='<strong>Incorrecto!</strong> Intentelo de nuevo :C';}
+            
     }
-}

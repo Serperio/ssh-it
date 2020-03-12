@@ -1,0 +1,96 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+body {
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: dimgray;
+}
+
+.border-right {
+  border-right:0px;
+}
+.alert {
+  margin: 20px 0;
+  width: 100%;
+}
+.sintaxis {
+  list-style: none;
+}
+
+#contenido {
+  padding: 0;
+}
+
+#sidebar-wrapper {
+  top: 0;
+  bottom: 0;
+  height: 50vh;
+  overflow-y:auto;
+  overflow-x: hidden;
+  z-index: initial;
+  border-right: none;
+  
+  background-color:#333;
+  min-height: 100vh;
+  margin-left: 0;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group a{
+ width: 18rem;        /*  con esto se amplia el ancho de la barra*/
+  color: white;
+}
+
+ 
+
+
+#sidebar-wrapper .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-right: 40px;
+}
+/* Opened submenu icon */
+#sidebar-wrapper .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-right: 40px;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -18rem;     /*  con esto se amplia el ancho que se oculta de la barra*/
+  }
