@@ -37,14 +37,14 @@
               </a>
             <!-- Submenu contenido -->
               <div id="submenu1" class="collapse sidebar-submenu">
-                <a href="#ctrl" class="list-group-item list-group-item-action">
+                <a href="#linux" class="list-group-item list-group-item-action">
                   <span class="menu-collapsed">Instalar Linux</span>
                 </a>
-                <a href="#ssh" class="list-group-item list-group-item-action">
-                    <span class="menu-collapsed">Instalar puerto ssh</span>
+                <a href="#svr" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">Inst. cliente/servidor SSH</span>
                 </a>
-                <a href="#man" class="list-group-item list-group-item-action">
-                    <span class="menu-collapsed">Configurar ssh</span>
+                <a href="#cnfig" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">Configurar SSH</span>
                 </a>
               </div>
 
@@ -52,7 +52,7 @@
                 <div class="d-flex w-100 justify-content-start align-items-center">
                   <span class="fas fa-horse fa-fw mr-3"></span>
                   <!--"fas fa-user" para ejercicios-->
-                  <span class="menu-collapsed">Configuracion sv</span>
+                  <span class="menu-collapsed">Configuracion Sv</span>
                   <span class="submenu-icon ml-auto"></span>
                 </div>
               </a>
@@ -62,13 +62,13 @@
                     <span class="menu-collapsed">Crear usuarios/grupos</span>
                 </a>
                 <a href="#sort" class="list-group-item list-group-item-action">
-                    <span class="menu-collapsed">modificar usuarios/grupos</span>
+                    <span class="menu-collapsed">Modificar usuarios/grupos</span>
                 </a>
                 <a href="#strings" class="list-group-item list-group-item-action">
-                    <span class="menu-collapsed">eliminar usuarios/grupos</span>
+                    <span class="menu-collapsed">Eliminar usuarios/grupos</span>
                 </a>
                 <a href="#base64" class="list-group-item list-group-item-action">
-                  <span class="menu-collapsed">permisos</span>
+                  <span class="menu-collapsed">Permisos</span>
                 </a>
                 <a href="#tr" class="list-group-item list-group-item-action">
                   <span class="menu-collapsed">Permisos especiales</span>
@@ -138,47 +138,112 @@
     <br>
     <br>
         <div class="container" id="container1">
-  <div class="alert alert-info" id="info">
-    <h3>Introduccion</h3>
-    <p>Comencemos con la instalacion de nuestro sistema operativo linux, en nuestro caso,
-      utilizaremos ubuntu para hacernos, aunque puede hacerse con cualquier Sistema de linux,
-      nosotros enfocaremos la instalacion a ubuntu, porque este es el sistema que utiliza el sistema operativo.
-      Tambien es puedes instalar linux junto con windows en el mismo pc, asi que no te preocupes
-      si normalmente utilizas windows </p>
+  <div class="alert alert-warning margen" align="justify">
+    <br>
+    <h3>Introducción</h3>
+    <br>
+    <p>En esta sección encontrarás como fue producido el servidor de la terminal interactiva SSH-IT, recomendados revisar este apartado luego 
+      de completar los ejercicios de la terminal, ya que su finalización significará que tienes el conocimiento suficiente como para operar 
+      y crear el servidor sin problemas.</p>
+    <p>Gracias al protocolo <code>SSH (Security Shell)</code> serás capaz de utilizar herramientas útiles para el manejo de información como <code>git</code> 
+      (herramienta de control de versiones), uso remoto, almacenar información en este mismo, etc. Con un poco de investigación, 
+      adicionado a la base entregada en SSH-IT puedes descubrir un montón de utilidades con las que puedes trabajar.</p>
+    <p>Cabe destacar que estos pasos no son únicos, puedes hacer el servidor SSH con Windows, por ejemplo, o bien con una versión distinta 
+      de Linux a la que usaremos en este tutorial.</p>
+    <p>Ante cualquier duda, problema o sugerencia, recuerden entrar a nuestro apartado de acerca de y dejarnos un correo.</p>
+      <br>
   </div>
  <div class="col-sm-12 basico"> <!--style="background-color:lavenderblush;"> -->
   <br>
-  <h3 class="text-center" id="ctrl"><strong>Abrir servidor</strong></h3>
+  <h2 class="text-center" id="linux"><strong>Abrir servidor</strong></h2>
   <br>
   <br>
-  <div class="margen">
-  <span><dt> Instalar linux </dt></span>
-  <p>Comencemos con la instalacion de nuestro sistema operativo linux,
-      en nuestro caso, utilizaremos ubuntu para hacernos, aunque puede hacerse con cualquier Sistema de linux,
-      nosotros enfocaremos la instalacion a ubuntu, porque este es el sistema que utiliza el sistema operativo.
-      Tambien es puedes instalar linux junto con windows en el mismo pc, asi que no te preocupes si normalmente
-      utilizas windows </p>
-    <br id="ssh">
+  <div class="margen" align="justify">
+  <h3 class="alert-warning">Instalar Linux</h3>
+  <br>
+  <p>Comencemos con la instalación de nuestro sistema operativo Linux, 
+    en nuestro caso, utilizaremos Ubuntu para hacernos, aunque puede hacerse 
+    con cualquier Sistema de Linux, nosotros enfocaremos la instalación a Ubuntu, porque 
+    este es el sistema que utiliza el sistema operativo. También es puedes instalar 
+    Linux junto con Windows en el mismo pc, así que no te preocupes si normalmente
+    utilizas Windows .</p>
+    <br>
+    <button type="button" class="btn btn-primary btn-block"><a class="enlaces" href="https://ubuntu.com/download/desktop"  target="_blank">Descarga Ubuntu</a></button>
+    <br>
+    <p>Una vez descargado la imagen <code>ISO</code>, debemos grabar el archivo para usarlo como arranque de nuestro sistema operativo, podemos grabarlo en un disco o bien si 
+      no tenemos lector de discos podemos crear un USB arrancable (En nuestro caso, utilizaremos Rufus para hacer el USB arrancable).</p>
+    <br>
+    <button type="button" class="btn btn-primary btn-block"><a class="enlaces" href="https://rufus.ie/"  target="_blank">Descarga Rufus</a></button>
+    <br>
+    <p>Una vez colocado, debemos debes “bootear” el pc desde tu USB/disco, para hacer esto, debes encender tu pc y presionar la tecla para acceder a la <code>BIOS</code> 
+      que comúnmente es F1 p F2 (Esta tecla depende de la marca del computador, puedes revisar en su instructivo o rápidamente buscarlo por tu modelo de PC internet). 
+      Una vez dentro debes localizar el apartado de “booteo” o arranque y modificarlo priorizando tu USB/disco como arranque principal.</p>
+    <p>Si hiciste todos los pasos correcta deberías estar en el instalador de Ubuntu, sigue las instrucciones cuidadosamente, 
+      elige todo normalmente hasta que llegues a los tipos de instalación</p>
+    <p>Puedes borrar todo y dejar tu pc únicamente con Ubuntu o bien particionar tu disco para tener ambos sistemas operativos en tu disco duro.</p>
+    <p>Si bien, eliges tener ambos sistemas operativos juntos, tendrás que generar una partición, según la versión de Ubuntu que elijas, puedes hacerla manual o la recomendada, 
+      acá que explicamos como hacerla de forma manual: </p>
+      <br>
+      <ul>
+        <li><p><kbd>SWAP (“Área de intercambio”)</kbd> : Es una memoria que utiliza la <code>RAM</code> en caso de necesitar espacio,
+           debes colocar la <code><b>partición de tipo lógica, ubicarla al principio del espacio y utilizarla como sistema de área de intercambio,</b></code>
+            se recomienda que tenga el valor del doble de la <code>RAM</code> que tiene el PC (por ejemplo, si se tiene una 1Gb hay que poner 2GB).</p></li>
+        <li><p><kbd>Partición “raíz” (o partición “/”)</kbd> : Aquí se guarda el sistema operativo, debe colocarse de <b><code>tipo lógica, sistema de ficheros ext4 transaccional 
+          y el punto de montaje como “/”</code></b>, se recomienda de 9Gb a 10Gb.</p></li>
+        <li><p><kbd>Partición "/home"</kbd> : Aquí se guardarán todos los archivos que vayas a crear en tu SO Ubuntu, debe colocarse de <b><code>tipo lógica, sistema de 
+          ficheros ext4 transaccional el punto de montaje como “/home”</code></b>, se recomiendan unos 25 Gb, pero esta depende mucho de los usos que pienses darle a tu 
+          sistema Ubuntu, o bien, a tu servidor.</p></li>
+      </ul>
+      <br>
+    <p>Una vez finalice la instalación, ya tenemos nuestro pc con Ubuntu completamente funcional. Si deseas volver a Windows, puede revisar el menú de “booteo” y poner en prioridad a Windows.</p>
+    <br id="svr">
     <hr>
     <br>
-    <span><dt>Instalar puerto ssh</dt></span>
-    <p></p>
-    <ul class="sintaxis">
-      <li><h5><dt><i>ssh [usuario@dominio]</i></dt></h5></li>
-    </ul>
-    <ul>
-      <li><kbd>ssh ["nombre_usuario@dominio"] -p [numero_puerto]</kbd> : Inicia sesión en un puerto específico.</li>
-      <li><kbd>ssh -i ["nombre_key"] ["nombre_usuario@dominio"]</kbd> : Se utiliza para autentificar una key pública.</li>
-    </ul>
-    <br id="man">
+    <br>
+    <h3 class="alert-warning">Instalar el cliente SSH y su servidor</h3>
+    <br>
+    <p>Lo primero es instalar el paquete SSH, que a su vez contiene el paquete de <code>OpenSSH Client</code> y <code>OpenSSH Server</code>, para ello ejecutamos
+    el siguiente comando en la consola:</p>
+      <h5 align="center"><kbd><code>sudo apt-get install ssh</code></kbd></h5>
+    <br>
+    <p>Lo mismo para <code>nmap</code>, una herramienta útil para escanear nuestros puertos y saber si están abiertos o cerrados.</p>
+      <h5 align="center"><kbd><code>sudo apt-get install nmap</code></kbd></h5>
+    <br>
+    <p>Y para finalizar instalamos <code>net-tools</code>, una herramienta útil para conocer nuestra dirección ip entre otras cosas.</p>
+      <h5 align="center"><kbd><code>sudo apt-get install net-tools</code></kbd></h5>
+    <br>
+    <p>Y ya estamos listos, el puerto SSH debería estar abierto de forma local, lo puedes comprobar utilizando <code>nmap</code>, comunmente es el puerto 22. 
+      Si quieres abrirlo de forma pública puedes abrir los puertos en tu router y redirigirlos a tu servidor, pero esto varía 
+      dependiendo del router que tengas.</p>
+      <p>Para conocer tu ip local y conectar otro pc a tu ordenador solo basta que utilices el 
+      comando <code>ifconfig</code>.</p>
+    <p>Ahora debemos dejarlo todo bien configurado y entender algunas formas de configurar nuestro servidor.</p>
+    <br id="cnfig">
     <hr>
     <br>
-    <span><dt>Configurar SSH</dt></span>
-    <p></p>
-    <ul class="sintaxis">
-      <li><h5><dt><i>man [comando]</i></dt></h5></li>
-    </ul>
-    <br id="cd">
+    <h3 class="alert-warning">Configurar SSH</h3>
+    <br>
+    <p>Tenemos que modificar algunas cosas antes para que nuestro servidor sea más seguro. Para eso tenemos que entrar en el archivo donde estan
+      guardadas las confirguraciones.</p>
+      <h5 align="center"><kbd><code>sudo gedit /etc/ssh/sshd_config</code></kbd></h5>
+      <br>
+    <p>Es aconsejable cambiar el puerto para mayor seguridad de nuestro servidor, ya que hay diversos scripts que atacan el puerto 22 de forma directa.</p>
+    <h5 align="center"><kbd><code>Port [Ingresar Puerto]</code></kbd></h5>
+    <br>
+    <p>Utilizar el protocolo 2 en SSH para una mayor seguridad (el protocolo 1 es más vulnerable).</p>
+    <h5 align="center"><kbd><code>Protocol 2</code></kbd></h5>
+    <br>
+    <p>Se recomienda quitar el uso del root por SSH, debido al peligro que puede ser que encuentren la contraseña y logren ingresar como él.</p>
+    <h5 align="center"><kbd><code>PermitRootLogin no</code></kbd></h5>
+    <br>
+    <p>Para aceptar o denegar ciertos usuarios</p>
+    <h5 align="center"><kbd><code>AllowUsers [cuentas]@[ip]</code></kbd></h5>
+    <br>
+    <p>Por último, para reducir en número de intentos posibles.</p>
+    <h5 align="center"><kbd><code>MaxAuthTries [Numero]</code></kbd></h5>
+    <br>
+    <br>
+
   </div>
   </div>
   </div>
@@ -188,7 +253,7 @@
       <div class="container">
       <div class="col-sm-12 parrafos intermedio">
       <br>
-      <h3 class="text-center" id="grep"><strong>Configuracion servidor</strong></h3>
+      <h3 class="text-center" id="grep"><strong>Configuración servidor</strong></h3>
       <br>
       <br>
       <div class="margen">
