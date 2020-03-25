@@ -1,8 +1,6 @@
-/*!
- * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
- */
+
+
+
 body {
   overflow-x: hidden;
   background-size: cover;
@@ -69,7 +67,12 @@ section a span {
   border-color: rgb(255, 0, 0);
 }
 
-.btn-danger, .btn-primary ,.alert-success, .alert-secondary, .alert-danger {
+.alert-warning {
+  border-color: yellow;
+  color: yellow;
+}
+
+.btn-danger, .btn-primary ,.alert-success, .alert-secondary, .alert-danger, .alert-warning {
   /*background-color: rgb(218, 92, 20);
   border-color: rgb(218, 92, 20);*/
   background-color: transparent;
@@ -208,8 +211,9 @@ color: rgb(0, 255, 8);
   padding: 0;
 }
 
-#putty, #putty:hover {
+.enlaces, .enlaces:hover{
   text-decoration: none;
+  color: white
 }
 
 /*-- cuadro de tips--*/
@@ -242,7 +246,12 @@ code {color: rgb(255, 0, 0)}
   .basico hr {
     border-top: 1px solid rgb(0, 255, 8);
   }
-
+  .intermedio hr {
+    border-top: 1px solid rgb(255, 0, 0);
+  }
+  .dificil hr {
+    border-top: 1px solid rgb(255, 255, 255);
+  }
 /* nivel Intermedio */
 
 .intermedio {
@@ -250,6 +259,15 @@ code {color: rgb(255, 0, 0)}
   color:rgb(255, 0, 0);
   border-width: 1px;
    border-style: solid;
+}
+
+/* nivel dificil */
+
+.dificil {
+  background-color: transparent;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
 }
 
 /* Footer
