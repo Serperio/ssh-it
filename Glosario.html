@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <title>Glosario</title>
@@ -13,7 +13,7 @@
   <body>
     <section>
       <div class="container">
-        <h1><a href="">SSH<span>-IT</span></a>
+        <h1><a href="index.html">SSH<span>-IT</span></a>
         <div class ="mini_texto">Interactive Terminal</div>
         </h1>
       </div>
@@ -181,6 +181,9 @@
                   <a href="#chown" class="list-group-item list-group-item-action">
                       <span class="menu-collapsed">chown</span>
                   </a>
+                  <a href="#chgrp" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">chgrp</span>
+                </a>
               </div>
 
                 <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Events</a> -->
@@ -708,7 +711,7 @@
             <span><dt><kbd>ifconfig</kbd> : Muestra la información correspondiente a interfaces de redes.</dt></span>
             <p></p>
             <ul class="sintaxis">
-                <li><h5><dt><i>ifconfig [opciones] </i></dt></h5></li>
+                <li><h5><dt><i>ifconfig</i></dt></h5></li>
             </ul>
             <br id="adduser">
             <hr>
@@ -728,28 +731,22 @@
             <span><dt><kbd>passwd</kbd> : Cambia la contraseña de un usuario.</dt></span>
             <p></p>
             <ul class="sintaxis">
-                <li><h5><dt><i>passwd [opciones] [usuario]</i></dt></h5></li>
+                <li><h5><dt><i>passwd [nombre_usuario]</i></dt></h5></li>
             </ul>
             <br id="usermod">
             <hr>
             <br>
         </div>
         <div class="margen">
-            <span><dt><kbd>usermod</kbd> : cambia configuraciones de usuario.</dt></span>
+            <span><dt><kbd>usermod</kbd> : Cambia configuraciones de usuario.</dt></span>
             <p></p>
             <ul class="sintaxis">
-                <li><h5><dt><i>usermod [opciones] [usuario]</i></dt></h5></li>
+                <li><h5><dt><i>usermod [opciones] [nombre_usuario]</i></dt></h5></li>
             </ul>
             <ul>
-                <li><kbd>usermod -i [nombreusuario] [nuevonombre]</kbd> : Cambia el nombre del usuario.</li>
-            </ul>
-            <ul>
+                <li><kbd>usermod -i [nombre_usuario] [nuevo_nombre]</kbd> : Cambia el nombre del usuario.</li>
                 <li><kbd>-g [grupo]</kbd> : Agrega un usuario a un grupo.</li>
-            </ul>
-            <ul>
                 <li><kbd> --lock </kbd> : Bloquea la contraseña de un usuario.</li>
-            </ul>
-            <ul>
                 <li><kbd> --unlock </kbd> : Desbloquea la contraseña de un usuario.</li>
             </ul>
             <br id="userdel">
@@ -760,7 +757,7 @@
             <span><dt><kbd>userdel</kbd> : Elimina un usuario.</dt></span>
             <p></p>
             <ul class="sintaxis">
-                <li><h5><dt><i>userdel [opciones] [usuario]</i></dt></h5></li>
+                <li><h5><dt><i>userdel [nombre_usuario]</i></dt></h5></li>
                 </ul>
                 <br id="groupadd">
                 <hr>
@@ -780,7 +777,7 @@
             <span><dt><kbd>groupmod</kbd> : Cambia nombre del grupo.</dt></span>
             <p></p>
             <ul class="sintaxis">
-                <li><h5><dt><i>groupmod [opciones] [grupo]</i></dt></h5></li>
+                <li><h5><dt><i>groupmod [nombre_grupo]</i></dt></h5></li>
             </ul>
             <br id="groupdel">
             <hr>
@@ -790,7 +787,7 @@
             <span><dt><kbd>groupdel</kbd> : Elimina un grupo del sistema.</dt></span>
             <p></p>
             <ul class="sintaxis">
-                <li><h5><dt><i>groupdel [opciones] [grupo]</i></dt></h5></li>
+                <li><h5><dt><i>groupdel [nombre_grupo]</i></dt></h5></li>
             </ul>
             <br id="chmod">
             <hr>
@@ -798,18 +795,21 @@
         </div>
         <div class="margen">
             <span><dt><kbd>chmod</kbd> : Cambiar los permisos de los archivos.</dt></span>
+            <br>
             <p>
                 Los permisos equivalen a 3 digitos: el primero muestra los permisos del propietario, el segundo los del grupo y el tercero de otros usuarios,
                 cada permiso tiene un valor y la suma de estos le otorga su valor
             </p>
             <ul>
-                <li><kbd>Escritura(w) </kbd> : El usuario con este permiso puede modificar el fichero, posee valor 2</li>
-                <li><kbd>Lectura(r)</kbd> : El usuario con este permiso puede leer el fichero, posee valor 4</li>
-                <li><kbd>Ejecucion(e) </kbd> : El usuario con este permiso puede ejecutar el fichero, posee valor 1</li>
+                <li><kbd>Escritura(w)</kbd> : El usuario con este permiso puede modificar el fichero, posee valor 2.</li>
+                <li><kbd>Lectura(r)</kbd> : El usuario con este permiso puede leer el fichero, posee valor 4.</li>
+                <li><kbd>Ejecucion(e)</kbd> : El usuario con este permiso puede ejecutar el fichero, posee valor 1.</li>
             </ul>
+            <p></p>
             <ul class="sintaxis">
                 <li><h5><dt><i>chmod [opciones] [número de 3 digitos] [nombre_archivo]</i></dt></h5></li>
             </ul>
+            <p></p>
             <ul>
                 <li><kbd>chmod -R</kbd> : Cambia los permisos de forma recursiva.</li>
                 <li><kbd>chmod 1[número de 3 dígitos] </kbd> : Activa el permiso "Sticky bit".</li>
@@ -824,13 +824,27 @@
             <span><dt><kbd>chown</kbd> : Cambia el propietario de un archivo.</dt></span>
             <p></p>
             <ul class="sintaxis">
-                <li><h5><dt><i>chown [opciones] [Nuevo_propietario] [nombre_archivo]</i></dt></h5></li>
+                <li><h5><dt><i>chown [opciones] [nuevo_propietario] [nombre_archivo]</i></dt></h5></li>
             </ul>
             <ul>
                 <li><kbd>chown -R</kbd> : Cambia de propiedad de forma recursiva.</li>
             </ul>
+            <br id="chgrp">
+            <hr>
             <br>
-            <br>
+        </div>
+        <div class="margen">
+          <span><dt><kbd>chgrp</kbd> : Cambia el grupo de un archivo.</dt></span>
+          <p></p>
+          <ul class="sintaxis">
+              <li><h5><dt><i>chgrp [opciones] [nuevo_grupo] [nombre_archivo]</i></dt></h5></li>
+          </ul>
+          <ul>
+              <li><kbd>chgrp -R</kbd> : Cambia de grupo de forma recursiva.</li>
+          </ul>
+          <br>
+          <hr>
+          <br>
         </div>
     </div>
       </div>
