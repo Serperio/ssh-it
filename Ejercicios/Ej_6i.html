@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <title>Ejercicios</title>
@@ -114,15 +114,6 @@
                       <a href="Ej_1d.html" class="list-group-item list-group-item-action">
                         <span class="menu-collapsed">Nivel 1</span>
                       </a>
-                      <a href="Ej_2d.html" class="list-group-item list-group-item-action">
-                        <span class="menu-collapsed">Nivel 2</span>
-                      </a>
-                      <a href="Ej_3d.html" class="list-group-item list-group-item-action">
-                        <span class="menu-collapsed">Nivel 3</span>
-                      </a>
-                      <a href="Ej_4d.html" class="list-group-item list-group-item-action">
-                        <span class="menu-collapsed">Nivel 4</span>
-                      </a>
                     </div>
       
                       <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Events</a> -->
@@ -156,7 +147,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a href="#" class="btn btn-info text-white" role="button">Crea tu propio servidor!</a>
+                <a href="../servidor.html" class="btn btn-info text-white" role="button">Crea tu propio servidor!</a>
               </li>
             </ul>
           </div>
@@ -166,31 +157,33 @@
     <!--Contenido-->
     <br>
     <br>
-    <div class="container basico margen"align="center">
-      <br>
-      <br>
-      <h3><strong>Ejercicio 0</strong></h3>
-      <br>
-      <p></p>
-      <p>Nombre de usuario : <code>ejercicio0</code> 
-      <br>
-        Contraseña : <code>ejercicio0</code></p>
-      <br>
-          <h5>Ve los archivos dentro de la carpeta, la contraseña es el nombre del archivo que está en la carpeta.</h5>
-          <br>
-          <p></p>
-          <h5>Comandos a utilizar: <a href="../Glosario.html#ls" class="comandos">ls</a></h5>
-          <br>
-          <br>
-          <strong><h4>Verificar Contraseña:</h4></strong>
-              <input type="text" name="contra" id="contra">
-        <button onclick="level1()">Verificar</button>
+    <div class="container basico margen" align="center">
+        <br>
+        <br>
+        <h3><strong>Ejercicio 6</strong></h3>
+        <br>
+        <p></p>
+        <p>
+            Nombre de usuario : <code>ej_6m</code>
+            <br>
+            <h5>el archivo esta comprimido en gzip y bzip2, verfica su formato y descomprimelo para acceder a la contraseña</h5>
+            <br>
+        <p></p>
+        <h5>Comandos a utilizar: <a href="../Glosario.html#gzip" class="comandos">gzip</a>
+        <a href="../Glosario.html#bzip2" class="comandos"> bzip2</a>
+        <a href="../Glosario.html#file" class="comandos"> file</a>
+        <a href="../Glosario.html#mv" class="comandos"> mv</a><a href="../Glosario.html#cp" class="comandos"> cp</a></h5>
+        <br>
+        <br>
+        <strong><h4>Verificar Contraseña:</h4></strong>
+        <input type="text" name="contra" id="contra">
+        <button onclick="level6b()">Verificar</button>
         <br>
         <br>
         <div id="lvl1"></div>
         <br>
         <br>
-</div>
+    </div>
 <br>
 <br>
 <br>

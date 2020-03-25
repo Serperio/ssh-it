@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Crea tu propio servidor!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
+  </head>
+<!-- **************************************************** CUERPO ************************************ -->
+
+  <body>
+    <section>
+      <div class="container">
+        <h1><a href="">SSH<span>-IT</span></a>
+        <div class ="mini_texto">Interactive Terminal</div>
+        </h1>
+      </div>
+      </section>
+        <!--Top-->
+    <div class="d-flex" id="wrapper">
+      <!-- class= "toggled" barra cerrada -->
+    <!-- Sidebar -->
+      <div class="sticky-top" id="sidebar-wrapper">
+        <div class="sticky-top">
+          <div class="sidebar-heading text-center">Menú</div>
+            <div class="list-group list-group-flush">
+
+              <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fas fa-crow fa-fw mr-3"></span>
+                    <!--"fas fa-baby" para ejercicios-->
+                    <span class="menu-collapsed">Abrir Servidor</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+              </a>
+            <!-- Submenu contenido -->
+              <div id="submenu1" class="collapse sidebar-submenu">
+                <a href="#ctrl" class="list-group-item list-group-item-action">
+                  <span class="menu-collapsed">Instalar Linux</span>
+                </a>
+                <a href="#ssh" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">Instalar puerto ssh</span>
+                </a>
+                <a href="#man" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">Configurar ssh</span>
+                </a>
+              </div>
+
+              <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fas fa-horse fa-fw mr-3"></span>
+                  <!--"fas fa-user" para ejercicios-->
+                  <span class="menu-collapsed">Configuracion sv</span>
+                  <span class="submenu-icon ml-auto"></span>
+                </div>
+              </a>
+          <!-- Submenu contenido -->
+              <div id='submenu2' class="collapse sidebar-submenu">
+                <a href="#grep" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">Crear usuarios/grupos</span>
+                </a>
+                <a href="#sort" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">modificar usuarios/grupos</span>
+                </a>
+                <a href="#strings" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">eliminar usuarios/grupos</span>
+                </a>
+                <a href="#base64" class="list-group-item list-group-item-action">
+                  <span class="menu-collapsed">permisos</span>
+                </a>
+                <a href="#tr" class="list-group-item list-group-item-action">
+                  <span class="menu-collapsed">Permisos especiales</span>
+                </a>
+                <a href="#tar" class="list-group-item list-group-item-action">
+                  <span class="menu-collapsed">Puertos</span>
+                </a>
+              </div>
+
+              <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                  <span class="fa fa-dragon fa-fw mr-3"></span>
+                  <span class="menu-collapsed">Seguridad</span>
+                  <!--"fas fa-robot" para ejercicios-->
+                  <span class="submenu-icon ml-auto"></span>
+                </div>
+              </a>
+          <!-- Submenu contenido -->
+              <div id='submenu3' class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action">
+                  <span class="menu-collapsed">Lorem Ipsum...</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <span class="menu-collapsed">Lorem Ipsum...</span>
+                </a>
+              </div>
+
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Events</a> -->
+                
+            </div>
+        </div>
+      </div>
+        
+      <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg text-center sticky-top">
+          <div class="container">
+          <button class="btn btn-danger" id="menu-toggle">Atajos</button>
+          <button class="navbar-toggler navbar-dark ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <!--Casillas Barra de navegacion-->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a href="index.html" class="nav-link">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="Ejercicios/Ejercicios.html" class="nav-link">Ejercicios</a>
+              </li>
+              <li class="nav-item">
+                <a href="Glosario.html" class="nav-link">Glosario</a>
+              </li>
+              <li class="nav-item">
+                <a href="Acerca de.html" class="nav-link">Acerca de</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="#" class="btn btn-info text-white role="button">Crea tu propio servidor!</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+      
+    <!--Contenido-->
+    <br>
+    <br>
+        <div class="container" id="container1">
+  <div class="alert alert-info" id="info">
+    <h3>Introduccion</h3>
+    <p>Comencemos con la instalacion de nuestro sistema operativo linux, en nuestro caso,
+      utilizaremos ubuntu para hacernos, aunque puede hacerse con cualquier Sistema de linux,
+      nosotros enfocaremos la instalacion a ubuntu, porque este es el sistema que utiliza el sistema operativo.
+      Tambien es puedes instalar linux junto con windows en el mismo pc, asi que no te preocupes
+      si normalmente utilizas windows </p>
+  </div>
+ <div class="col-sm-12 basico"> <!--style="background-color:lavenderblush;"> -->
+  <br>
+  <h3 class="text-center" id="ctrl"><strong>Abrir servidor</strong></h3>
+  <br>
+  <br>
+  <div class="margen">
+  <span><dt> Instalar linux </dt></span>
+  <p>Comencemos con la instalacion de nuestro sistema operativo linux,
+      en nuestro caso, utilizaremos ubuntu para hacernos, aunque puede hacerse con cualquier Sistema de linux,
+      nosotros enfocaremos la instalacion a ubuntu, porque este es el sistema que utiliza el sistema operativo.
+      Tambien es puedes instalar linux junto con windows en el mismo pc, asi que no te preocupes si normalmente
+      utilizas windows </p>
+    <br id="ssh">
+    <hr>
+    <br>
+    <span><dt>Instalar puerto ssh</dt></span>
+    <p></p>
+    <ul class="sintaxis">
+      <li><h5><dt><i>ssh [usuario@dominio]</i></dt></h5></li>
+    </ul>
+    <ul>
+      <li><kbd>ssh ["nombre_usuario@dominio"] -p [numero_puerto]</kbd> : Inicia sesión en un puerto específico.</li>
+      <li><kbd>ssh -i ["nombre_key"] ["nombre_usuario@dominio"]</kbd> : Se utiliza para autentificar una key pública.</li>
+    </ul>
+    <br id="man">
+    <hr>
+    <br>
+    <span><dt>Configurar SSH</dt></span>
+    <p></p>
+    <ul class="sintaxis">
+      <li><h5><dt><i>man [comando]</i></dt></h5></li>
+    </ul>
+    <br id="cd">
+  </div>
+  </div>
+  </div>
+  <br>
+
+
+      <div class="container">
+      <div class="col-sm-12 parrafos intermedio">
+      <br>
+      <h3 class="text-center" id="grep"><strong>Configuracion servidor</strong></h3>
+      <br>
+      <br>
+      <div class="margen">
+        <span><dt>Crear usuarios/grupos</dt></span>
+      <p></p>
+      <ul class="sintaxis">
+        <li><h5><dt><i>grep [opciones] [patrón] [nombre_archivo]</i></dt></h5></li>
+      </ul>
+      <ul>
+        <li><kbd>grep -c [patrón] [nombre_archivo]</kbd> : En lugar de imprimir las líneas coincidentes, imprime la cantidad de líneas que coincidieron en cada archivo.</li>
+        <li><kbd>grep -e [patrón] [nombre_archivo]</kbd> : Permite especificar que lo que viene a continuación es una expresión (y no una opción).</li>
+        <li><kbd>grep -f [nombre_archivo]</kbd> : Obtiene los patrones del archivo.</li>
+        <li><kbd>grep -v [patrón] [nombre_archivo]</kbd> : Muestra las líneas que no contienen el patrón.</li>
+        <li><kbd>grep -l [patrón] [nombre_archivo]</kbd> : Muestra los archivos que contienen el patrón en alguna línea, en lugar de las líneas.</li>
+        <li><kbd>grep -H [patrón] [nombre_archivo]</kbd> : Imprime el nombre del archivo con cada coincidencia.</li>
+      </ul>
+      <br id="sort">
+      <hr>
+      <br>
+      <span><dt>Modificar usuario/grupo</dt></span>
+      <p></p>
+      <ul class="sintaxis">
+        <li><h5><dt><i>sort [opciones] [nombre_archivo]</i></dt></h5></li>
+      </ul>
+      <ul>
+        <li><kbd>sort -b [nombre_archivo]</kbd> : Ignora los blancos (espacio, tabuladores, entre otros...) al principio de las líneas.</li>
+        <li><kbd>sort -c [nombre_archivo]</kbd> : Revisa si los archivos están ordenados, pero no ordena.</li>
+        <li><kbd>sort -d [nombre_archivo]</kbd> : Ignora los caracteres que no sean letras o números.</li>
+        <li><kbd>sort -f [nombre_archivo]</kbd> : Ignora la diferencia entre mayúsculas y minúsculas.</li>
+        <li><kbd>sort -n [nombre_archivo]</kbd> : Considera por criterio numérico.</li>
+        <li><kbd>sort -o [nombre_archivo]</kbd> : Escribe el resultado en un archivo en vez de la salida estándar.</li>
+        <li><kbd>sort -r [nombre_archivo]</kbd> : Invierte el orden de ordenamiento.</li>
+        <li><kbd>sort -u [nombre_archivo]</kbd> : Si se encuentran varias líneas iguales, éstas sólo se reproducirán una vez.</li>
+        <li><kbd>sort -t [nombre_separador]</kbd> : Especifica el carácter de separación entre campos. Por defecto es el espaciado.</li>
+      </ul>
+      <br id="strings">
+      <hr>
+      <br>
+      <span><dt>Eliminar usuario/grupo</dt></span>
+      <p></p>
+      <ul class="sintaxis">
+        <li><h5><dt><i>strings [opciones] [nombre_archivo]</i></dt></h5></li>
+      </ul>
+      <ul>
+        <li><kbd>strings -a [nombre_archivo]</kbd> : Busca en todos los contenidos de los ficheros.</li>
+        <li><kbd>strings -f [nombre_archivo]</kbd> : Muestra el nombre del fichero antes de cada cadena.</li>
+        <li><kbd>strings -n [min] / bytes [min]</kbd> : Muestra secuencias de caracteres de al menos [min] caracteres de largo.</li>
+      </ul>
+      <br id="base64">
+      <hr>
+      <br>
+      <span><dt>Permisos</dt></span>
+      <p></p>
+      <ul class="sintaxis">
+        <li><h5><dt><i>base64 [opciones] [nombre_archivo]</i></dt></h5></li>
+      </ul>
+      <ul>
+        <li><kbd>base64 -e [nombre_archivo]</kbd> : Codifica cualquier dato de una salida estándar o archivo. Opción por defecto.</li>
+        <li><kbd>base64 -d [nombre_archivo]</kbd> : Decodifica cualquier dato de una salida estándar o archivo.</li>
+        <li><kbd>base64 -n [nombre_archivo]</kbd> : Por defecto "base64" verifica errores mientras decodifica, con esta opción se ignora la verificación al momento de decodificar.</li>
+        <li><kbd>base64 -u [nombre_archivo]</kbd> : Obtiene información sobre el comando.</li>
+        <li><kbd>base64 -i [nombre_archivo]</kbd> : Ignora caracteres no alfabéticos mientras decodifica.</li>
+        <li><kbd>base64 -copyright [nombre_archivo]</kbd> : Consigue información copyright.</li>
+      </ul>
+      <br id="tr">
+      <hr>
+      <br>
+      <span><dt>Permisos especiales</dt></span>
+      <p></p>
+      <ul class="sintaxis">
+        <li><h5><dt><i>tr [opciones] [conjunto_1] [conjunto_2] [nombre_archivo]</i></dt></h5></li>
+      </ul>
+      <ul>
+        <li><kbd>tr -c [conjunto_1] [conjunto_2] [nombre_archivo]</kbd> : Define al [conjunto_1] como todos los caracteres que no se encuentran en la definición dada por el usuario.</li>
+        <li><kbd>tr -d [conjunto_1] [conjunto_2] [nombre_archivo]</kbd> : Borra los caracteres de definidos en el [conjunto_1].</li>
+        <li><kbd>tr -s [conjunto_1] [conjunto_2] [nombre_archivo]</kbd> : Elimina la secuencia continua de caracteres repetidos, definidos en el [conjunto_1].</li>
+        </ul>
+        <br id="tar">
+        <hr>
+        <br>
+      <span><dt>Puertos</dt></span>
+      <p></p>
+      <ul class="sintaxis">
+        <li><h5><dt><i>tar [opciones] [nombre_archivo]</i></dt></h5></li>
+      </ul>
+      <ul>
+        <li><kbd>tar -c [nombre_archivo]</kbd> : Crea un nuevo archivo <code>.tar</code>.</li>
+        <li><kbd>tar -v [nombre_archivo]</kbd> : Muestra una descripción detallada del progreso de la compresión.</li>
+        <li><kbd>tar -r [nombre_archivo]</kbd> : Agregar tanto archivo como directorio a un fichero comprimido (No se puede agregar <code>.targz</code> o <code>.tar.bz2</code>).</li>
+      </ul>
+      <br id="gzip">
+<!-- DIFICIL -->
+
+
+      
+
+
+
+
+
+
+      </ul>
+
+        </div>
+        </div>
+      </div>
+
+
+
+<br>
+<!--Footer-->
+<footer class="page-footer font-small blue pt-3" style="background-color:rgb(0, 0, 0);">
+    <div class="container">
+      <p>
+        <img class="iconos" src="img/Logo_UTFSM.png" align="left" style="width:80px"> <!--Logo universidad-->
+        © 2020 Copyright: PaKeDi
+        <img class="iconos" src="img/logo_pakedi_led4.png" align="right"  style="width:80px"> <!--Logo PaKeDi-->
+      </p>
+    </div>
+</footer>
+</div>
+</div>
+</body>
+
+
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/2224b72383.js" crossorigin="anonymous"></script>
+<!-- Menu Toggle Script -->
+
+<script>
+$("#menu-toggle").click(function (e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+</script>
+
+</html>
