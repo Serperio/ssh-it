@@ -26,6 +26,7 @@
         <div class="sticky-top">
           <div class="sidebar-heading text-center">Menú</div>
             <div class="list-group list-group-flush">
+
               <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fas fa-crow fa-fw mr-3"></span>
@@ -141,12 +142,45 @@
               </a>
           <!-- Submenu contenido -->
               <div id='submenu3' class="collapse sidebar-submenu">
-                <a href="#" class="list-group-item list-group-item-action">
-                  <span class="menu-collapsed">Lorem Ipsum...</span>
-                </a>
-                <a href="servidor.html" class="list-group-item list-group-item-action">
-                  <span class="menu-collapsed">Lorem Ipsum...</span>
-                </a>
+                  <a href="#sudo" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">sudo</span>
+                  </a>
+                  <a href="#nmap" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">nmap</span>
+                  </a>
+                  <a href="#ssh-keygen" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">ssh-keygen</span>
+                  </a>
+                  <a href="#ifconfig" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">ifconfig</span>
+                  </a>
+                  <a href="#adduser" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">adduser</span>
+                  </a>
+                  <a href="#passwd" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">passwd</span>
+                  </a>
+                  <a href="#usermod" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">usermod</span>
+                  </a>
+                  <a href="#userdel" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">userdel</span>
+                  </a>
+                  <a href="#groupadd" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">groupadd</span>
+                  </a>
+                  <a href="#groupmod" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">groupmod</span>
+                  </a>
+                  <a href="#groupdel" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">groupdel</span>
+                  </a>
+                  <a href="#chmod" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">chmod</span>
+                  </a>
+                  <a href="#chown" class="list-group-item list-group-item-action">
+                      <span class="menu-collapsed">chown</span>
+                  </a>
               </div>
 
                 <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Events</a> -->
@@ -180,7 +214,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a href="servidor.html" class="btn btn-info text-white role="button">Crea tu propio servidor!</a>
+                <a href="#" class="btn btn-info text-white role="button">Crea tu propio servidor!</a>
               </li>
             </ul>
           </div>
@@ -242,7 +276,6 @@
       <li><h5><dt><i>ssh [usuario@dominio]</i></dt></h5></li>
     </ul>
     <ul>
-      <li><kbd>ssh ["nombre_usuario@dominio"] -p [numero_puerto]</kbd> : Inicia sesión en un puerto específico.</li>
       <li><kbd>ssh -i ["nombre_key"] ["nombre_usuario@dominio"]</kbd> : Se utiliza para autentificar una key pública.</li>
     </ul>
     <br id="man">
@@ -408,7 +441,6 @@
     <li><kbd>uniq -i [nombre_archivo]</kbd> : Considera como igual las mayúsculas y minúsculas.</li>
   </ul>
   <br>
-  <hr>
   </div>
   </div>
   </div>
@@ -616,8 +648,11 @@
             de las líneas.</li>
         </ul>
         <br>
-        <hr>
         <br>
+  </div>
+  </div>
+  </div>
+  <br>
 
 
 
@@ -627,18 +662,177 @@
 
 <!-- DIFICIL -->
 
-
-      
-
-
-
-
-
-
-      </ul>
-
+<div class="container">
+    <div class="col-sm-12 parrafos dificil">
+        <br>
+        <h3 class="text-center" id="sudo"><strong>Comandos Avanzados</strong></h3>
+        <br>
+        <br>
+        <div class="margen">
+            <span><dt><kbd>sudo</kbd> : Utiliza otros comandos como usuario root.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>sudo [opciones] [comando]</i></dt></h5></li>
+            </ul>
+            <ul>
+                <li><kbd>sudo -i</kbd> : Permite iniciar sesión como root.</li>
+            </ul>
+            <br id="nmap">
+            <hr>
+            <br>
         </div>
+        <div class="margen">
+            <span><dt><kbd>nmap</kbd> : Herramienta de exploración de redes y de sondeo de puertos. </dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>nmap [dominio]</i></dt></h5></li>
+            </ul>
+            <ul>
+                <li><kbd>nmap -p [rango puertos]</kbd> : Busca los puertos abiertos en cierto intervalo, tambien puede ser utilizado para un puerto.</li>
+            </ul>
+            <br id="ssh-keygen">
+            <hr>
+            <br>
         </div>
+        <div class="margen">
+            <span><dt><kbd>ssh-keygen</kbd> : Crea una key para el usuario que la usa.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>ssh-keygen</i></dt></h5></li>
+            </ul>
+            <br id="ifconfig">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>ifconfig</kbd> : Muestra la información correspondiente a interfaces de redes.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>ifconfig [opciones] </i></dt></h5></li>
+            </ul>
+            <br id="adduser">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>adduser</kbd> : Crea un grupo.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>groupadd [nuevo_usuario]</i></dt></h5></li>
+            </ul>
+            <br id="passwd">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>passwd</kbd> : Cambia la contraseña de un usuario.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>passwd [opciones] [usuario]</i></dt></h5></li>
+            </ul>
+            <br id="usermod">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>usermod</kbd> : cambia configuraciones de usuario.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>usermod [opciones] [usuario]</i></dt></h5></li>
+            </ul>
+            <ul>
+                <li><kbd>usermod -i [nombreusuario] [nuevonombre]</kbd> : Cambia el nombre del usuario.</li>
+            </ul>
+            <ul>
+                <li><kbd>-g [grupo]</kbd> : Agrega un usuario a un grupo.</li>
+            </ul>
+            <ul>
+                <li><kbd> --lock </kbd> : Bloquea la contraseña de un usuario.</li>
+            </ul>
+            <ul>
+                <li><kbd> --unlock </kbd> : Desbloquea la contraseña de un usuario.</li>
+            </ul>
+            <br id="userdel">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>userdel</kbd> : Elimina un usuario.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>userdel [opciones] [usuario]</i></dt></h5></li>
+                </ul>
+                <br id="groupadd">
+                <hr>
+                <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>groupadd</kbd> : Crea un grupo.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>groupadd [nombre_grupo]</i></dt></h5></li>
+            </ul>
+            <br id="groupmod">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>groupmod</kbd> : Cambia nombre del grupo.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>groupmod [opciones] [grupo]</i></dt></h5></li>
+            </ul>
+            <br id="groupdel">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>groupdel</kbd> : Elimina un grupo del sistema.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>groupdel [opciones] [grupo]</i></dt></h5></li>
+            </ul>
+            <br id="chmod">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>chmod</kbd> : Cambiar los permisos de los archivos.</dt></span>
+            <p>
+                Los permisos equivalen a 3 digitos: el primero muestra los permisos del propietario, el segundo los del grupo y el tercero de otros usuarios,
+                cada permiso tiene un valor y la suma de estos le otorga su valor
+            </p>
+            <ul>
+                <li><kbd>Escritura(w) </kbd> : El usuario con este permiso puede modificar el fichero, posee valor 2</li>
+                <li><kbd>Lectura(r)</kbd> : El usuario con este permiso puede leer el fichero, posee valor 4</li>
+                <li><kbd>Ejecucion(e) </kbd> : El usuario con este permiso puede ejecutar el fichero, posee valor 1</li>
+            </ul>
+            <ul class="sintaxis">
+                <li><h5><dt><i>chmod [opciones] [número de 3 digitos] [nombre_archivo]</i></dt></h5></li>
+            </ul>
+            <ul>
+                <li><kbd>chmod -R</kbd> : Cambia los permisos de forma recursiva.</li>
+                <li><kbd>chmod 1[número de 3 dígitos] </kbd> : Activa el permiso "Sticky bit".</li>
+                <li><kbd>chmod 2[número de 3 dígitos]</kbd> : Activa el permiso "SGID".</li>
+                <li><kbd>chmod 4[número de 3 dígitos]</kbd> : Activa el permiso "SUID".</li>
+            </ul>
+            <br id="chown">
+            <hr>
+            <br>
+        </div>
+        <div class="margen">
+            <span><dt><kbd>chown</kbd> : Cambia el propietario de un archivo.</dt></span>
+            <p></p>
+            <ul class="sintaxis">
+                <li><h5><dt><i>chown [opciones] [Nuevo_propietario] [nombre_archivo]</i></dt></h5></li>
+            </ul>
+            <ul>
+                <li><kbd>chown -R</kbd> : Cambia de propiedad de forma recursiva.</li>
+            </ul>
+            <br>
+            <br>
+        </div>
+    </div>
       </div>
 
 
